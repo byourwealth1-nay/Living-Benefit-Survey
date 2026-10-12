@@ -34,6 +34,11 @@
     .chart-emoji{font-size:18px;line-height:1;margin-right:6px;vertical-align:middle}
     @media(max-width:620px){.coverage-chart{padding:14px 12px}.chart-row{grid-template-columns:73px minmax(0,1fr);gap:7px}.chart-label{font-size:11px}.chart-label b{width:21px;height:21px;font-size:11px;margin-right:3px}.chart-right{gap:5px;flex-direction:column;align-items:stretch}.chart-right>strong{width:auto;text-align:left;font-size:12px}.chart-track{flex:auto;width:100%;height:15px}}
     @media print{.coverage-chart{box-shadow:none;margin:12px 0;padding:12px;break-inside:avoid}.chart-title{margin-bottom:8px}.chart-row{margin:7px 0}.chart-track{height:12px}.chart-caption{margin:8px 0 0;padding-top:7px}.chart-bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+    /* Print fix: keep the entire Section 4 (A/B/C table, chart and note) together on page 2. */
+    @media print{
+      .report-only .report-highlight{break-before:page;page-break-before:always;break-inside:avoid-page;page-break-inside:avoid;margin-top:0}
+      .report-only .report-highlight .report-table,.report-only .report-highlight .coverage-chart{break-inside:avoid;page-break-inside:avoid}
+    }
   </style>
 </head>
 <body>
