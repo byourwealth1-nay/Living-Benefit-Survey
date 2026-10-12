@@ -97,3 +97,4 @@ python3 tests/test_v2.py
 - OTP ยืนยันตัวลูกค้า, workflow การถอนความยินยอม, retention / audit log
 - Dashboard ติดตามสถานะ follow-up / นัดหมาย, ค้นหาหลายเงื่อนไข, export รวมที่เหมาะสม
 - แจ้งเตือนเมื่อมีลูกค้าส่งแบบสอบถาม (email/LINE ผ่าน API ของผู้ให้บริการ)
+
