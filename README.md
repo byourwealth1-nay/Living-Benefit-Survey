@@ -4,6 +4,21 @@
 
 > **สำคัญมาก**: ระบบนี้เป็น *functional local prototype* มิใช่ระบบ production-ready สำหรับข้อมูลสุขภาพลูกค้าจริง เพราะยังไม่มีประกาศความเป็นส่วนตัวและผู้ควบคุมข้อมูลที่ตรวจสอบแล้ว, การเข้ารหัสฐานข้อมูล, ระบบจัดการสิทธิ์องค์กร, 2FA, การตรวจสอบความปลอดภัย, ระบบสำรองข้อมูลเข้ารหัส, ระบบกำหนด retention / audit log / คำขอสิทธิเจ้าของข้อมูล และมาตรการคุ้มครองข้อมูลตาม PDPA ครบถ้วน
 
+## เว็บไซต์ทดลองผ่าน GitHub Pages (แบบเดียวกับ InsurePlanCal)
+
+URL ที่ตั้งไว้: https://byourwealth1-nay.github.io/Living-Benefit-Survey/
+
+เว็บไซต์นี้มีแบบสำรวจ 5 ขั้นตอน คำนวณ A/B/C และออก PDF / JSON ในเบราว์เซอร์ ใช้สำหรับ **ทดสอบด้วยข้อมูลสมมติเท่านั้น** และ **ไม่ส่งคำตอบเข้า Dashboard / ฐานข้อมูล SQLite** เพราะ GitHub Pages รัน Python Backend ไม่ได้
+
+เปิดใช้งานครั้งแรก:
+
+1. ไปที่ **Settings → Pages** ของ Repository นี้
+2. ตรง **Build and deployment → Source** เลือก **GitHub Actions**
+3. ไปที่ **Actions → Test and publish Living Benefits Survey demo → Run workflow** เลือกสาขา `main`
+4. รอ workflow จบแล้วเปิด URL ด้านบน
+
+ไฟล์ `index.html` คือหน้าเว็บไซต์ทดลอง ส่วน `.github/workflows/pages.yml` จะทดสอบและเผยแพร่หลัง push ไป `main` โดยอัตโนมัติเมื่อเปิด GitHub Pages แล้ว หากต้องการให้ลูกค้ากรอกออนไลน์แล้วคำตอบเข้า Dashboard จริง ต้องใช้โฮสติ้ง Backend + ฐานข้อมูลที่ปลอดภัยเพิ่มเติม ไม่ใช่ GitHub Pages อย่างเดียว
+
 ## 1. วิธีติดตั้งและเปิดใช้งาน (Mac / Windows / Linux)
 
 ต้องมี **Python 3.10 ขึ้นไป** และไม่ต้อง `pip install` เพิ่ม
