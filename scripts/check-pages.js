@@ -3,7 +3,7 @@ const fs = require('fs');
 const vm = require('vm');
 const assert = require('assert');
 const html = fs.readFileSync('index.html', 'utf8');
-for (const text of ['Living Benefits Survey', 'consentCheck', 'stepContent', 'sideGap', 'แบบสอบถาม', 'คำตอบจะไม่ส่งเข้า Dashboard']) {
+for (const text of ['Living Benefits Survey', 'consentCheck', 'stepContent', 'sideGap', 'แบบสอบถาม', 'ไม่เชื่อมต่อ Dashboard ของที่ปรึกษา']) {
   assert(html.includes(text), `Missing: ${text}`);
 }
 const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)];
